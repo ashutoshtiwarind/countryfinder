@@ -9,7 +9,6 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import '../styles/MediaCard.css';
 import { useState } from 'react';
-import { spacing } from '@mui/system';
 
 const style = {
   position: 'absolute',

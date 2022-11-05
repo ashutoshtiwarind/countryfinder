@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import '../styles/MediaCard.css';
 import { useState } from 'react';
+import { spacing } from '@mui/system';
 
 const style = {
   position: 'absolute',
@@ -25,7 +26,6 @@ const style = {
 
 export default function MediaCard({countryData}) {
   const [countryname, setCountryName] = useState([]);
-  console.log("countryname",countryname)
   const [open, setOpen] = useState(false);
 
   // const [country, setCountryData] = useState([])
@@ -33,7 +33,6 @@ export default function MediaCard({countryData}) {
 
   // const fetchCountryData = async (countryname) => {
   //   const res = await CountryApi.getOneCountryData(countryname);
-  //   console.log(res.data)
   //   setCountryData(res.data)
   // };
   //   useEffect(()=>{
@@ -41,14 +40,11 @@ export default function MediaCard({countryData}) {
   //       fetchCountryData(countryname);
   //     }
   //   },[countryname])
-  console.log("hi", open)
   const handleOpen = (e) => {
-    console.log(e)
     setCountryName(e)
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
-  // console.log("hi",countryData)
   return (
     countryData.map((e) => {
       return (
@@ -85,7 +81,8 @@ export default function MediaCard({countryData}) {
            <p>Native name:{countryname.name.official} </p> 
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+           <p>Sub Region: {countryname.subregion}</p>
+           <h4>click anywhere to return to home page</h4>
           </Typography>
         </Box>
       </Modal>

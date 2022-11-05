@@ -21,14 +21,13 @@ export default function AllCountry() {
     <>
      <ToggleButtonGroup
       color="primary"
-      value={alignment}
+      // value={alignment}
       exclusive
       // onChange={handleChange}
       aria-label="Platform"
     >
-      <ToggleButton value="web">Web</ToggleButton>
-      <ToggleButton value="android">Android</ToggleButton>
-      <ToggleButton value="ios">iOS</ToggleButton>
+      <ToggleButton value="web">sort by population</ToggleButton>
+      <ToggleButton value="android">sort by region</ToggleButton>
     </ToggleButtonGroup>
 
     <div style={{display:'grid', gridTemplateColumns: 'auto auto auto auto', padding: '2%'}}>

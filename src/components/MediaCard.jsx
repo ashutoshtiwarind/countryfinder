@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import '../styles/MediaCard.css';
+import { useState } from 'react';
 
 const style = {
   position: 'absolute',

@@ -26,6 +26,7 @@ const style = {
 export default function MediaCard({countryData}) {
   const [countryname, setCountryName] = useState([]);
   const [open, setOpen] = useState(false);
+  console.log("hi", countryData)
 
   // const [country, setCountryData] = useState([])
   // console.log('mil', country)

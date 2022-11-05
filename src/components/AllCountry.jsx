@@ -8,6 +8,12 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 export default function AllCountry() {
   const [allCountry, setCountry] = useState([]);
   
+  const handleChange = () => {
+    const sortedData = allCountry.sort((a,b) => {
+      return a.population - b.population;
+    });
+    setCountry(sortedData);
+  }
   const fetchCountry = async()=> {
     const res = await CountryApi.getCountry()
     setCountry(res.data);
@@ -23,7 +29,7 @@ export default function AllCountry() {
       color="primary"
       // value={alignment}
       exclusive
-      // onChange={handleChange}
+      onChange={handleChange}
       aria-label="Platform"
     >
       <ToggleButton value="web">sort by population</ToggleButton>

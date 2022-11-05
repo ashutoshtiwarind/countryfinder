@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import Country from "../services/Country";
+import MediaCard from "./MediaCard";
 
 export default function AllCountry() {
   const [allCountry, setCountry] = useState([]);
@@ -16,6 +17,7 @@ export default function AllCountry() {
 
   return (
     <>
+    <MediaCard countryData = {allCountry} />
    {allCountry.map((e)=> {
     return <p>{e.name.common}</p>
    })}

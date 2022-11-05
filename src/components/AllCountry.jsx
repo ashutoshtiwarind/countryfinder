@@ -8,8 +8,9 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 export default function AllCountry() {
   const [allCountry, setCountry] = useState([]);
   
-  const handleChange = () => {
-    const sortedData = allCountry.sort((a,b) => {
+  const handleChange = async() => {
+    const res = await CountryApi.getCountry()
+    const sortedData = res.data.sort((a,b) => {
       return a.population - b.population;
     });
     setCountry(sortedData);

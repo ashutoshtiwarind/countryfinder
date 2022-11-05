@@ -1,9 +1,10 @@
+import AllCountry from "./components/AllCountry";
 
 
 function App() {
   return (
     <>
-    hello
+    <AllCountry />
     </>
   );
 }

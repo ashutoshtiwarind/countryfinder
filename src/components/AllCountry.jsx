@@ -7,7 +7,6 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 export default function AllCountry() {
   const [allCountry, setCountry] = useState([]);
-  const [alignment, setAlignment] = React.useState('web');
   
   const fetchCountry = async()=> {
     const res = await CountryApi.getCountry()

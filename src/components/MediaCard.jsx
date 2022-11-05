@@ -8,9 +8,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import '../styles/MediaCard.css';
-import { useState, useEffect } from 'react';
-// import Country from './Country';
-import CountryApi from '../services/CountryApi.js'
 
 const style = {
   position: 'absolute',
@@ -50,7 +47,7 @@ export default function MediaCard({countryData}) {
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
-  console.log("hi",countryData)
+  // console.log("hi",countryData)
   return (
     countryData.map((e) => {
       return (
@@ -75,7 +72,7 @@ export default function MediaCard({countryData}) {
         <Button onClick={()=> handleOpen(e)}>More Details</Button>
       </CardActions>
     </Card>
-    { open &&
+    {open &&
         <Modal
         open={open}
         onClose={handleClose}
@@ -84,7 +81,7 @@ export default function MediaCard({countryData}) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {/* {countryname.} */}
+           <p>Native name:{countryname.name.official} </p> 
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.

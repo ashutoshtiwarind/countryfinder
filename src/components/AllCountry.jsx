@@ -37,6 +37,7 @@ export default function AllCountry() {
   return (
     <>
      <ToggleButtonGroup
+     className="btn"
       color="primary"
       // value={alignment}
       exclusive
@@ -47,7 +48,7 @@ export default function AllCountry() {
       <ToggleButton value="android">sort by region</ToggleButton>
     </ToggleButtonGroup>
 
-    <div style={{display:'grid', gridTemplateColumns: 'auto auto auto auto', padding: '2%'}}>
+    <div className ='main'>
     <MediaCard countryData = {allCountry} />
     </div>
     </>

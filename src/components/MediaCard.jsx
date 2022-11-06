@@ -47,8 +47,8 @@ export default function MediaCard({countryData}) {
   return (
     countryData.map((e) => {
       return (
-        <>
-        <Card classNmae = 'parent' style={{padding: '2%'}} sx={{ maxWidth: 345 }}>
+        <div className = 'parent'>
+        <Card style={{padding: '2%'}} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="120"
@@ -86,7 +86,7 @@ export default function MediaCard({countryData}) {
         </Box>
       </Modal>
     }
-    </>)
+    </div>)
     })
   );
 }

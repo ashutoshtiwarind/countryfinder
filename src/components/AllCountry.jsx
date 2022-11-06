@@ -45,7 +45,6 @@ export default function AllCountry() {
       aria-label="Platform"
     >
       <ToggleButton value="web">sort by population in {sort} order</ToggleButton>
-      <ToggleButton value="android">sort by region</ToggleButton>
     </ToggleButtonGroup>
 
     <div className ='main'>
